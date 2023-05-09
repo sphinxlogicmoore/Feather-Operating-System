@@ -1,0 +1,2488 @@
+
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<title>CDE - Common Desktop Environment / Wiki / FreeBSDBuild</title>
+<meta name="viewport" content="width=1100">
+<link rel="icon" sizes="180x180" href="https://a.fsdn.com/con/img/sandiego/logo-180x180.png" type="image/png">
+<link rel="icon" sizes="any" href="https://a.fsdn.com/con/img/sandiego/svg/originals/sf-icon-orange-no_sf.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="https://a.fsdn.com/con/img/sandiego/logo-180x180.png">
+<link rel="mask-icon" href="https://a.fsdn.com/con/img/sandiego/svg/originals/sf-icon-orange-no_sf.svg" color="#FF6600">
+<link rel="stylesheet" href="https://a.fsdn.com/con/css/lato.css?">
+<script>
+if (!window.SF) { window.SF = {}; }
+SF.sandiego = false;
+SF.sandiego_chrome = true;
+SF.cdn = "https://a.fsdn.com/con";
+</script>
+
+<link rel="stylesheet" type="text/css" href="https://a.fsdn.com/allura/nf/1683566309/_ew_/allura/css/forge/hilite.css">
+<link rel="stylesheet" type="text/css" href="https://a.fsdn.com/allura/nf/1683566309/_ew_/tool/wiki/css/wiki.css">
+<link rel="stylesheet" type="text/css" href="https://a.fsdn.com/allura/nf/1683566309/_ew_/_slim/css?href=allura%2Fcss%2Fforge%2Ftooltipster.css">
+<link rel="stylesheet" type="text/css" href="https://a.fsdn.com/allura/nf/1683566309/_ew_/allura/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://a.fsdn.com/allura/nf/1683566309/_ew_/theme/sftheme/css/forge.css">
+<link rel="stylesheet" type="text/css" href="https://a.fsdn.com/allura/nf/1683566309/_ew_/_slim/css?href=css%2Fpage_list.css%3Bcss%2Fjquery.tagsinput.css">
+<link rel="stylesheet" type="text/css" href="https://a.fsdn.com/allura/nf/1683566309/_ew_/css/easymde.min.css">
+<link rel="stylesheet" type="text/css" href="https://a.fsdn.com/allura/nf/1683566309/_ew_/_slim/css?href=css%2Fmarkitup_sf.css%3Bcss%2Fshow-hint.css">
+<style>
+        div.moderate {
+            color:grey;
+        }
+        </style>
+<link rel="stylesheet" type="text/css" href="https://a.fsdn.com/allura/nf/1683566309/_ew_/theme/sftheme/css/sftheme/sandiego/cmp.css">
+
+
+<script type="text/javascript" src="https://a.fsdn.com/allura/nf/1683566309/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-3.6.0.min.js%3Ballura%2Fjs%2Fjquery.cookie-1.4.1.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fcmp2.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared_head.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Ftypescript%2Fcompliance.js"></script>
+
+<style type="text/css">
+            /* make URL & Project custom fields in support tickets not get hidden as much */
+.project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5),
+.project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) {
+  overflow: visible;
+  font-size: 22px;
+  width: 340px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(5) label, .project-forge.mountpoint-site-support .view_holder .grid-4:nth-child(6) label {
+  font-size: 14px;
+}
+        </style>
+<style>
+  .hidden { display: none }
+  a.notfound { color: #f00; }
+</style>
+<style>.XwoZEwoPDlsKHOMOwcHMKexDCiUgddRgQwE {
+        display: none
+    }</style>
+<link rel="canonical" href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/" />
+<link rel="alternate" type="application/rss+xml" title="Page RSS" href="feed.rss" />
+<link rel="alternate" type="application/atom+xml" title="Page Atom" href="feed.atom" />
+<link rel="alternate" type="application/rss+xml" title="Wiki RSS" href="../feed.rss" />
+<link rel="alternate" type="application/atom+xml" title="Wiki Atom" href="../feed.atom" />
+<script>
+        window.bizx.cmp.init({
+            
+        });
+    </script>
+<script>
+    function initPiwik(){
+      var _paq = window._paq = window._paq || [];
+      _paq.push(['trackPageView', document.title, {
+            dimension1: 'cdesktopenv',
+            dimension2: 'wiki'
+      }]);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//analytics.slashdotmedia.com/";
+        _paq.push(['setTrackerUrl', u+'sf.php']);
+        _paq.push(['setSiteId', 39]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'sf.js'; s.parentNode.insertBefore(g,s);
+      })();
+    }
+    bizx.cmp.ifConsent('publisher', ['storage', 'measurement'], initPiwik);
+</script>
+
+<script>
+  (function () {
+      bizx.cmp.ifConsent('', ['all', 'bombora'], function () {
+          /*global _ml:true, window */
+          _ml = window._ml || {};
+          _ml.eid = '771';
+
+          var s = document.getElementsByTagName('script')[0], cd = new Date(), mltag = document.createElement('script');
+          mltag.type = 'text/javascript';
+          mltag.async = true;
+          mltag.defer = true;
+          mltag.src = '//ml314.com/tag.aspx?' + cd.getDate() + cd.getMonth() + cd.getFullYear();
+          s.parentNode.insertBefore(mltag, s);
+      });
+  })();
+</script>
+
+<script type="text/javascript">
+    bizx.cmp.ifConsent('', ['all'], function () {
+        /* jshint ignore:start */
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        /* jshint ignore:end */
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ window.dataLayer.push(arguments); }
+        window.gtag = window.gtag || gtag;
+        bizx.cmp.embedScript("https://www.googletagmanager.com/gtag/js");
+        gtag('js', new Date());
+        gtag('set', {
+            'page_location': 'https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/',
+            'page_referrer': 'https://www.google.com/',
+        });
+    });
+</script>
+<script type="text/javascript">
+    /*global ga, gtag */
+
+    
+        
+        bizx.cmp.ifConsent('', ['all'], function () {
+            ga('create', "UA-36130941-1", {cookieDomain: 'auto', 'name': 'sfnt1','sampleRate': 9});
+            ga('sfnt1.set', 'dimension9', 'cdesktopenv');
+            ga('sfnt1.set', 'dimension10', 'wiki');
+            ga('sfnt1.set', 'dimension13', 'Logged Out');
+            ga('sfnt1.send', 'pageview');
+        });
+        
+        bizx.cmp.ifConsent('', ['all'], function () {
+            gtag('config', 'G-1H226E4E4L', {
+                
+                send_page_view: false,
+                'SF_Page_Type': '', 
+                user_properties: {
+                    'SF_Logged_in': 'Logged Out', 
+                },
+                'devicePixelRatio': SF.devicePixelRatio, 
+            });
+            gtag('event', 'page_view', { send_to: 'G-1H226E4E4L' });
+        });
+    
+    
+    
+        
+</script>
+</head>
+<body class=" 
+body_class sandiego_chrome  legacy_chrome  l-allow-natural-width 
+ wiki-FreeBSDBuild" id="forge">
+
+<script type="text/javascript" src="https://a.fsdn.com/allura/nf/1683566309/_ew_/_slim/js?href=allura%2Fjs%2Fjquery-ui-1.13.2.min.js"></script>
+
+<div class="off-canvas position-right" id="offCanvas" data-off-canvas>
+
+<ul class="header-nav-menulist">
+<li class="highlight search">
+<form method="get" action="/directory/" class="m-search-form">
+<input type="text" placeholder="Search for software or solutions" autocomplete="off" name="q">
+<label>
+<input type="submit" class="bt" value="">
+<svg data-name="search" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z" /></svg>
+</label>
+</form>
+</li>
+<li class="highlight"><a href="/auth/">Join/Login</a></li>
+<li><a href="/directory/">Open Source Software</a></li>
+<li><a href="/software/">Business Software</a></li>
+<li><a href="/blog/" title="Blog">Blog</a></li>
+<li><a href="/about">About</a></li>
+<li><a id="header-nav-more" data-toggle="header-nav-more header-nav-more-content" data-toggler=".toggled">More</a></li>
+<li>
+<ul id="header-nav-more-content" class="toggled" data-toggler=".toggled">
+<li><a href="/articles/">Articles</a></li>
+<li><a href="/create">Create</a></li>
+<li><a href="https://sourceforge.net/p/forge/documentation/Docs%20Home/">Site Documentation</a></li>
+<li><a href="/support">Support Request</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="off-canvas-content" data-off-canvas-content>
+<script>
+    SF.linkout_icon = '<svg  data-name="sf-linkout-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve"><polygon class="st0" points="243.2,243.2 56.8,243.2 56.8,56.8 123,56.8 123,9 9,9 9,291 291,291 291,179.4 243.2,179 "/><polygon class="st0" points="128.5,213 155,186.5 176,165.5 206.7,196.3 235.5,132.5 248.9,102.6 290.6,9.8 291,9 290.6,9.2 197.4,51.1 169.1,63.8 103.7,93.3 137,126.5 115.9,147.5 89.5,174 "/></svg>';
+</script>
+<div class="l-header-nav  sandiego">
+<section class="sandiego l-header-nav-top show-for-large">
+<div class="row">
+<a href="/" title="Home" class="sf-logo">
+<img src="https://a.fsdn.com/con/images/sandiego/sf-logo-full.svg" alt="SourceForge logo" class="sf-logo-full" />
+</a>
+<nav class="links">
+<a href="/support" title="Help">Help</a>
+<a href="/create/" title="Create">Create</a>
+<a href="/user/registration" title="Join">Join</a>
+<a href="/auth/" title="Login">Login</a>
+</nav>
+</div>
+</section>
+<section class="sandiego l-header-nav-top hide-for-large">
+<div class="row">
+<a href="/" title="Home" class="sf-logo">
+<img src="https://a.fsdn.com/con/images/sandiego/sf-logo-full.svg" alt="SourceForge logo" class="sf-logo-full" />
+</a>
+<div class="title-bar-right">
+<button type="button" class="menu-icon" data-toggle="offCanvas"></button>
+</div>
+</div>
+</section>
+<section class="sandiego l-header-nav-bottom">
+<nav class="row">
+<a href="/" title="Home" class="sf-logo">
+<img src="https://a.fsdn.com/con/images/sandiego/sf-logo-full.svg" alt="SourceForge logo" class="sf-logo-full" />
+</a>
+<div class="links">
+<div class="nav-dropdown">
+<a href="/directory/" title="Browse">Open Source Software</a>
+</div>
+<div class="nav-dropdown">
+<a href="/software/">Business Software</a>
+</div>
+<div class="nav-dropdown">
+<a>Resources</a>
+<ul class="nav-dropdown-menu">
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/articles/">Articles</a></li>
+</ul>
+</div>
+<div class="dev-menu-when-stuck">
+Menu
+<ul class="dev-menu-dropdown header-nav-menulist">
+<li><a href="/support">Help</a></li>
+<li><a href="/create">Create</a></li>
+<li><a href="/user/registration/" title="Join">Join</a></li>
+<li><a href="/auth/" title="Login">Login</a></li>
+</ul>
+</div>
+<div class="search-toggle-when-stuck">
+<a class="search-toggle">
+<svg data-name="search" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z" /></svg>
+</a>
+</div>
+</div>
+<div class="search">
+<div class="github-sync-button">
+<a href="/p/import_project/github/" rel="nofollow" title="Sync your Github project to SourceForge" id="github-link">
+<img src="https://a.fsdn.com/con/images/sandiego/github-sync.png" srcset="https://a.fsdn.com/con/images/sandiego/github-sync_2x.png 2x" alt="GitHub sync" id="github-sync" />
+</a>
+</div>
+<form method="get" action="/directory/" class="m-search-form">
+<div class="typeahead__container">
+<div class="typeahead__field">
+<div class="typeahead__query">
+<input type="text" placeholder="Search for software or solutions" autocomplete="off" name="q">
+</div>
+<label>
+<input type="submit" class="bt" value="">
+<svg data-name="search" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z" /></svg>
+</label>
+</div>
+</div>
+</form>
+</div>
+</nav>
+</section>
+</div>
+<div class="notification-on-project-page">
+</div>
+<section id="page-body" class=" neighborhood-Projects project-cdesktopenv mountpoint-wiki 
+
+">
+<div id="nav_menu_holder">
+<div class="sandiego">
+<section class="project-masthead">
+<div class="backdrop" style="box-sizing: content-box; padding-bottom: 24px"></div>
+<div class="content">
+<nav id="breadcrumbs" class="breadcrumbs rtl">
+<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+<meta itemprop="position" content="1" />
+</li>
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<a itemprop="item" href="/directory/"><span itemprop="name">Browse</span></a>
+<meta itemprop="position" content="2" />
+</li>
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<a itemprop="item" href="/p/cdesktopenv/"><span itemprop="name">CDE - Common Desktop Environment</span></a>
+<meta itemprop="position" content="3" />
+</li>
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<span itemprop="name">Wiki</span>
+<meta itemprop="position" content="4" />
+</li>
+</ul>
+</nav>
+<div class="overview">
+<div class="project-icon   ">
+<img itemprop="image" alt="CDE - Common Desktop Environment" title="CDE - Common Desktop Environment" src="https://a.fsdn.com/allura/p/cdesktopenv/icon?1343122350" /></div>
+<div class="title long-title">
+<meta itemprop="name" content="CDE - Common Desktop Environment" />
+<h1 class="long-title">CDE - Common Desktop Environment Wiki
+</h1>
+<h2 class="as-h3 summary">
+The Common Desktop Environment, the classic UNIX desktop
+</h2>
+<div class="as-h3 brought-by">
+Brought to you by:
+<a href="/u/flibble/profile/">flibble</a>,
+<a href="/u/jon13/profile/">jon13</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div id="top_nav" class="">
+<div id="top_nav_admin">
+<ul class="dropdown">
+<li class="">
+<a href="/projects/cdesktopenv/" class="tool-summary-32">
+Summary
+</a>
+</li>
+<li class="">
+<a href="/projects/cdesktopenv/files/" class="tool-files-sf-32">
+Files
+</a>
+</li>
+<li class="">
+<a href="/projects/cdesktopenv/reviews/" class="tool-reviews-32">
+Reviews
+</a>
+</li>
+<li class="">
+<a href="/projects/cdesktopenv/support" class="tool-support-32">
+Support
+</a>
+</li>
+<li class="selected">
+<a href="/p/cdesktopenv/wiki/" class="tool-wiki-32">
+Wiki
+</a>
+</li>
+<li class="">
+<a href="/p/cdesktopenv/tickets/" class="tool-tickets-32">
+Tickets
+</a>
+</li>
+<li class="">
+<a href="/p/cdesktopenv/discussion/" class="tool-discussion-32">
+Discussion
+</a>
+</li>
+<li class="">
+<a href="/p/cdesktopenv/_list/git" class="tool-git-32">
+Git ▾
+</a>
+<ul>
+<li class=""><a href="/p/cdesktopenv/code/">Code</a></li>
+<li class=""><a href="/p/cdesktopenv/cde-test/">cde-test</a></li>
+</ul>
+</li>
+<li class="">
+<a href="/p/cdesktopenv/mailman/" class="tool-mailman-32">
+Mailing Lists
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div id="content_base">
+<a id="sidebar-activate" href="#">
+<span class="btn-label">Menu</span>
+<span class="btn-arrow-down">▾</span>
+<span class="btn-arrow-up">▴</span>
+</a>
+<div id="sidebar">
+<form id="search" method="GET" action="/p/cdesktopenv/wiki/search/">
+<input name="q" type="text" title="Search Wiki" placeholder="Search Wiki">
+<label>
+<input type="submit" style="display:none">
+<b class="fa fa-search" title="Submit"></b>
+</label>
+</form>
+<ul class="sidebarmenu">
+<li>
+<a href="/p/cdesktopenv/wiki/" class="wiki_home">
+<span>Wiki Home</span>
+</a>
+</li>
+<li>
+<a href="/p/cdesktopenv/wiki/browse_pages/">
+<span>Browse Pages</span>
+</a>
+</li>
+<li>
+<a href="/p/cdesktopenv/wiki/browse_tags/">
+<span>Browse Labels</span>
+</a>
+</li>
+</ul>
+<ul class="sidebarmenu">
+<li>
+<a href="/nf/markdown_syntax" target="_blank" rel="nofollow">
+<span>Formatting Help</span>
+</a>
+</li>
+</ul>
+<script>
+        
+        $('#sidebar').on('click', 'a[href$="#toggle-subscribe"]', function(e) {
+            e.preventDefault();
+            var link = this;
+            var data = {
+                _session_id: $.cookie('_session_id'),
+                subscribe: '1'
+            };
+            $.post(this.href, data, function(){
+                $('#messages').notify('Subscribed to wiki.');
+                $('span', link).text('Unsubscribe');
+                $(link).attr('href', $(link).attr('href').replace('-subscribe','-unsubscribe'));
+            });
+        });
+        $('#sidebar').on('click', 'a[href$="#toggle-unsubscribe"]', function(e) {
+            e.preventDefault();
+            var link = this;
+            var data = {
+                _session_id: $.cookie('_session_id'),
+                unsubscribe: '1'
+            };
+            $.post(this.href, data, function(){
+                $('#messages').notify('Unsubscribed.');
+                $('span', link).text('Subscribe to wiki');
+                $(link).attr('href', $(link).attr('href').replace('-unsubscribe','-subscribe'));
+            });
+        });
+        
+      </script>
+</div>
+<script>
+$('#sidebar-admin-header').on('click', function(e){
+    $("#sidebar-admin-menu").toggleClass("hidden");
+    $(this).toggleClass("expanded");
+    e.preventDefault();
+});
+</script>
+<div class="grid-20 pad">
+<h2 class="dark title">
+<span>FreeBSDBuild</span>
+
+<small>
+<a class="icon" href="history" rel="nofollow" title="History"><i class="fa fa-calendar"></i></a>
+<a class="icon" href="feed" rel="nofollow" title="RSS"><i class="fa fa-rss"></i></a>
+<a class="icon" href="../search" title="Search"><i class="fa fa-search"></i></a>
+</small>
+
+</h2>
+<div class="editbox">
+<div class="grid-9">
+<label class="simple">Labels: </label>
+<span><a href="/p/cdesktopenv/wiki/search/?q=labels_t:%22FreeBSD%22&parser=standard">FreeBSD (1)</a></span>
+</div>
+<div class="grid-9 gravatar sm">
+<label class="simple">Authors: </label>
+<a href="/u/jon13/profile/" class="user-mention">
+<img src="https://a.fsdn.com/allura/u/jon13/user_icon?1530665282&amp;w=16" srcset="https://a.fsdn.com/allura/u/jon13/user_icon?w=24&amp;1530665282 1.5x
+        ,
+            https://a.fsdn.com/allura/u/jon13/user_icon?w=32&amp;1530665282 2x" alt="Jon Trulson" title="Jon Trulson" class="emboss x16">
+</a>
+<a href="/u/saperski/profile/" class="user-mention">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="saperski" title="saperski" class="emboss x16">
+</a>
+<a href="/u/flibble/profile/" class="user-mention">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Peter Howkins" title="Peter Howkins" class="emboss x16">
+</a>
+<a href="/u/woomia/profile/" class="user-mention">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Christopher Turkel" title="Christopher Turkel" class="emboss x16">
+</a>
+<a href="/u/xxbsd/profile/" class="user-mention">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Ulrich Wilkens" title="Ulrich Wilkens" class="emboss x16">
+</a>
+<a href="/u/dcarmichael/profile/" class="user-mention">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Douglas Carmichael" title="Douglas Carmichael" class="emboss x16">
+</a>
+<a href="/u/fathippo/profile/" class="user-mention">
+<img src="https://a.fsdn.com/allura/u/fathippo/user_icon?1634904114&amp;w=16" srcset="https://a.fsdn.com/allura/u/fathippo/user_icon?w=24&amp;1634904114 1.5x
+        ,
+            https://a.fsdn.com/allura/u/fathippo/user_icon?w=32&amp;1634904114 2x" alt="Danilo Pecher" title="Danilo Pecher" class="emboss x16">
+</a>
+<a href="/u/cschuber/profile/" class="user-mention">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Cy Schubert" title="Cy Schubert" class="emboss x16">
+</a>
+<a href="/u/feigr/profile/" class="user-mention">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Anders Bergwall" title="Anders Bergwall" class="emboss x16">
+</a>
+</div>
+</div>
+<div>
+<div><div class="markdown_content"><table style="background-color: #FFCCCC; border-width: 1px; border-color: #FF0000; border-style: solid;">
+<tbody><tr><td>We are currently requesting that all contributions to the project are licenced under the MIT licence. <a href="../WhyMIT">Find out why?</a></td></tr>
+</tbody></table>
+<p><strong>WARNING: THIS GUIDE IS FOR ADVANCED USERS FOR USE IN BUILDING AND PORTING.</strong></p>
+<p><strong>Note: Compilation with system clang is now supported on FreeBSD 10 and later</strong></p>
+<p>Table of Contents</p>
+<div class="toc">
+<ul>
+<li><a href="#supported-versions">Supported Versions</a></li>
+<li><a href="#first-steps">First steps</a><ul>
+<li><a href="#install-packages">Install packages</a><ul>
+<li><a href="#install-packages-from-source">Install packages from source</a></li>
+<li><a href="#install-binary-packages">Install binary packages</a></li>
+</ul>
+</li>
+<li><a href="#edit-etcrcconf">Edit /etc/rc.conf</a></li>
+</ul>
+</li>
+<li><a href="#clone-or-download-the-source-code">Clone or download the source code</a></li>
+<li><a href="#build-cde">Build CDE</a></li>
+<li><a href="#start-cde">Start CDE</a></li>
+<li><a href="#install-dtlogin-as-login-manager">Install dtlogin as Login Manager</a></li>
+</ul>
+</div>
+<h1 id="supported-versions">Supported Versions</h1>
+<p>These instructions have been successfully tested on :</p>
+<ul>
+<li>FreeBSD 12.3-RELEASE aarch64 (Raspberry Pi3)</li>
+<li>FreeBSD 12.3-RELEASE x86_64</li>
+<li>FreeBSD 12.4-RELEASE aarch64 (Raspberry Pi3)</li>
+<li>FreeBSD 12.4-RELEASE x86_64</li>
+<li>FreeBSD 12-STABLE x86_64</li>
+<li>FreeBSD 13.1 x86_64</li>
+<li>FreeBSD 13-STABLE x86_64</li>
+<li>FreeBSD 14.0-CURRENT x86_64</li>
+</ul>
+<h1 id="first-steps">First steps</h1>
+<p>Install FreeBSD 12-RELEASE or FreeBSD 13-RELEASE and install/update your ports tree.</p>
+<div class="codehilite"><pre><span></span><code>freebsd-update fetch
+freebsd-update install
+</code></pre></div>
+<p>reboot. </p>
+<p>Complete install documentation can be found in the <a class="" href="https://docs.freebsd.org/en/books/handbook/bsdinstall/" rel="nofollow">FreeBSD Handbook</a>.</p>
+<p>If you plan to install the dependencies from source, fetch the current ports tree and build the portmaster utility:</p>
+<div class="codehilite"><pre><span></span><code>portsnap fetch extract update
+cd /usr/ports/ports-mgmt/portmaster
+make -DBATCH install clean
+</code></pre></div>
+<h2 id="install-packages">Install packages</h2>
+<h3 id="install-packages-from-source">Install packages from source</h3>
+<p>the source packages can be built and installed using the following sequence</p>
+<div class="codehilite"><pre><span></span><code><span class="n">portmaster</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="o">-</span><span class="n">D</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">confirm</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"> </span>\
+<span class="w">  </span><span class="n">x11</span><span class="o">/</span><span class="n">xorg</span><span class="w"> </span>\
+<span class="w">  </span><span class="n">devel</span><span class="o">/</span><span class="n">git</span><span class="w"> </span>\
+<span class="w">  </span><span class="n">converters</span><span class="o">/</span><span class="n">iconv</span><span class="w"> </span>\
+<span class="w">  </span><span class="n">shells</span><span class="o">/</span><span class="n">ksh93</span><span class="w"> </span>\
+<span class="w">  </span><span class="n">x11</span><span class="o">-</span><span class="n">toolkits</span><span class="o">/</span><span class="n">open</span><span class="o">-</span><span class="n">motif</span><span class="w"> </span>\
+<span class="w">  </span><span class="n">lang</span><span class="o">/</span><span class="n">tcl86</span>
+<span class="w">  </span><span class="n">textproc</span><span class="o">/</span><span class="n">opensp</span>
+</code></pre></div>
+<p>If you don't want to wade through the many configuration steps and build with the standard configuration instead, add the -G parameter to portmaster.</p>
+<p>More information about ports and packages can be found in the <a class="" href="https://docs.freebsd.org/en/books/handbook/ports/" rel="nofollow">FreeBSD Handbook Ports chapter</a>. More information about X11 in FreeBSD can also be found in the <a class="" href="https://docs.freebsd.org/en/books/handbook/x11/" rel="nofollow">X11 Chapter in the FreeBSD Handbook</a>.</p>
+<h3 id="install-binary-packages">Install binary packages</h3>
+<p>To install precompiled binary packages, make the following call </p>
+<div class="codehilite"><pre><span></span><code>pkg install cde xorg
+</code></pre></div>
+<p>If you wish to track the CDE development branch,</p>
+<div class="codehilite"><pre><span></span><code>pkg install cde-devel xorg
+</code></pre></div>
+<p>The development branch is updated monthly though it may be updated more frequently.</p>
+<h2 id="edit-etcrcconf">Edit /etc/rc.conf</h2>
+<p>Add to /etc/rc.conf</p>
+<div class="codehilite"><pre><span></span><code>rpcbind_enable="YES"
+inetd_enable="YES"
+</code></pre></div>
+<p>Reboot</p>
+<h1 id="clone-or-download-the-source-code">Clone or download the source code</h1>
+<div>
+<div class="markdown_content"><p>Use the git clone command here:</p>
+<p>On most platform you can use HTTPS: </p>
+<div class="codehilite"><pre><span></span><code>git clone https://git.code.sf.net/p/cdesktopenv/code cdesktopenv-code
+</code></pre></div>
+<p>If that doesn't work (for instance some BSD distros) , use the native git protocol instead</p>
+<div class="codehilite"><pre><span></span><code>git clone git://git.code.sf.net/p/cdesktopenv/code cdesktopenv-code
+</code></pre></div>
+<p>Or download the latest source release:</p>
+<p><span class="download-button-4f5899651be1ce564900026e" style="margin-bottom: 1em; display: block;"></span></p>
+<p><strong>Note: The source archive will become out of date. When you want the latest code, clone the git repository.</strong></p></div>
+</div>
+<h1 id="build-cde">Build CDE</h1>
+<div>
+<div class="markdown_content"><p><strong>Version 2.5.0 and newer (autoconf)</strong></p>
+<p>For the BSD's, you must use gmake, and you must specify the location of the TCL install directory (the below example assumes TCL v8.6).</p>
+<div class="codehilite"><pre><span></span><code>$ ./autogen.sh
+$ ./configure --with-tcl<span class="o">=</span>/usr/local/lib/tcl8.6 <span class="nv">MAKE</span><span class="o">=</span><span class="s2">"gmake"</span>
+$ gmake
+$ sudo gmake install
+</code></pre></div>
+<p><strong>Version 2.4.0 and earlier (imake) - deprecated</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="n">cdesktopenv</span><span class="o">-</span><span class="k">code</span><span class="o">/</span><span class="n">cde</span><span class="w"></span>
+<span class="n">make</span><span class="w"> </span><span class="n">World</span><span class="w"></span>
+<span class="k">admin</span><span class="o">/</span><span class="n">IntegTools</span><span class="o">/</span><span class="n">dbTools</span><span class="o">/</span><span class="n">installCDE</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n n-Quoted">`pwd`</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h1 id="start-cde">Start CDE</h1>
+<p>You can now start CDE login manager as root:</p>
+<div class="codehilite"><pre><span></span><code>/usr/dt/bin/dtlogin -nodaemon
+</code></pre></div>
+<p>Alternatively, you can start an X session as a normal user:</p>
+<div class="codehilite"><pre><span></span><code>startx /usr/dt/bin/Xsession
+</code></pre></div>
+<h1 id="install-dtlogin-as-login-manager">Install dtlogin as Login Manager</h1>
+<p>Switch to the CDE build directory and copy and enable the rc-file</p>
+<div class="codehilite"><pre><span></span><code>cp contrib/rc/freebsd/dtlogin /usr/local/etc/rc.d/
+echo 'dtlogin_enable="YES"' &gt;&gt; /etc/rc.conf
+echo "allowed_users=anybody" &gt; /usr/local/etc/X11/Xwrapper.config
+</code></pre></div>
+<p>reboot</p></div></div>
+<div id="create_wiki_page_holder" title="Create New Page" style="display:none">
+<form>
+<label class="grid-2">Name</label>
+<div class="grid-7"><input type="text" name="name" /></div>
+</form>
+</div>
+</div>
+<hr style="margin-top: 1em; margin-bottom: 2em; clear:both;">
+<h4>Related</h4>
+<p>
+<a href="/p/cdesktopenv/wiki/SupportedPlatforms/">Wiki: SupportedPlatforms</a><br>
+</p>
+<div id="discussion_holder"><h2>Discussion</h2>
+<div>
+<div>
+<div class="comment-row">
+<div>
+<div class="page_list">
+1 <a href="/p/cdesktopenv/wiki/FreeBSDBuild/?page=1">2</a> <a href="/p/cdesktopenv/wiki/FreeBSDBuild/?page=2">3</a> <a href="/p/cdesktopenv/wiki/FreeBSDBuild/?page=1">&gt;</a> <a href="/p/cdesktopenv/wiki/FreeBSDBuild/?page=2">&gt;&gt;</a> (Page 1 of 3)
+</div>
+<div class="clear"></div>
+</div>
+<div id="comment">
+<ul>
+
+<li>
+<div>
+<div id="dbea" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/jon13/user_icon?1530665282" srcset="https://a.fsdn.com/allura/u/jon13/user_icon?w=72&amp;1530665282 1.5x
+        ,
+            https://a.fsdn.com/allura/u/jon13/user_icon?w=96&amp;1530665282 2x" alt="Jon Trulson" title="Jon Trulson" class="emboss x48">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 652px;  ">
+<div class="header">
+<a href="/u/jon13/profile/" class="user-mention">
+Jon Trulson
+</a>
+- <i style="color: #777">
+<span title="Wed Mar 12, 2014 11:59 PM UTC">
+2014-03-12
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#dbea" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>On Wed, 12 Mar 2014, Christopher Turkel wrote:</p>
+<blockquote>
+<p></p><pre>--- v34<br />
++++ v35<br />
+@@ -1,10 +1,9 @@<br />
+-<br />
+<br /><br /><table style="background-color: #FFCCCC; border-width: 1px; border-color: #FF0000; border-style: solid;">
+ <tbody><tr><td>We are currently requesting that all contributions to the project are licenced under the MIT licence. <a href="../WhyMIT">Find out why?</a></td></tr>
+</tbody></table><p></p>
+<p><strong>WARNING: THIS GUIDE IS FOR ADVANCED USERS FOR USE IN BUILDING AND PORTING.</strong><br />
+-<strong>WARNING: CDE DOES NOT COMPILE WITH GCC 4.7/8 and does not compile with Clang at all.</strong><br />
++<strong>WARNING: CDE DOES NOT COMPILE WITH CLANG.</strong></p>
+<p>Most of CDE applications work. Note, DtInfo does not build at all.</p>
+</pre>
+</blockquote>
+<p>I think Dtinfo builds on all of the BSD's now, doesn't it?</p>
+<p>-- <br />
+Jon Trulson</p>
+<div class="codehilite"><pre><span></span> Last day, Capricorn fifteens. Year of the city, 2274.
+ Carousel begins.
+</pre></div>
+</div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#dbea">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+</ul>
+<ul>
+
+<li>
+<div>
+<div id="a7ef" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/jon13/user_icon?1530665282" srcset="https://a.fsdn.com/allura/u/jon13/user_icon?w=72&amp;1530665282 1.5x
+        ,
+            https://a.fsdn.com/allura/u/jon13/user_icon?w=96&amp;1530665282 2x" alt="Jon Trulson" title="Jon Trulson" class="emboss x48">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 652px;  ">
+<div class="header">
+<a href="/u/jon13/profile/" class="user-mention">
+Jon Trulson
+</a>
+- <i style="color: #777">
+<span title="Sun Jun 19, 2016 06:22 PM UTC">
+2016-06-19
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#a7ef" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>This page needs a maintainer who uses FreeBSD :)</p>
+<p>With 2.2.4 (to be released today) the section about building Motif with printing enabled should be removed. This should no longer be a requirement as printing via Xp is no longer supported by X11 anyway.</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#a7ef">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="a7ef/6775" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/fathippo/user_icon?1634904114&amp;w=32" srcset="https://a.fsdn.com/allura/u/fathippo/user_icon?w=48&amp;1634904114 1.5x
+        ,
+            https://a.fsdn.com/allura/u/fathippo/user_icon?w=64&amp;1634904114 2x" alt="Danilo Pecher" title="Danilo Pecher" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 632px;   margin-right:0px ">
+<div class="header">
+<a href="/u/fathippo/profile/" class="user-mention">
+Danilo Pecher
+</a>
+- <i style="color: #777">
+<span title="Wed Sep 07, 2016 10:40 AM UTC">
+2016-09-07
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#a7ef/6775" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>I'm using FreeBSD 10.3 and couldtake over maintainance of the page.</p>
+<p>On 19 June 2016 at 20:22, Jon Trulson <a href="mailto:jon13@users.sf.net">jon13@users.sf.net</a> wrote:</p>
+<blockquote>
+<p>This page needs a maintainer who uses FreeBSD :)</p>
+<p>With 2.2.4 (to be released today) the section about building Motif with<br />
+printing enabled should be removed. This should no longer be a requirement<br />
+as printing via Xp is no longer supported by X11 anyway.</p>
+<hr />
+<p>Sent from sourceforge.net because you indicated interest in<br />
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/">https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/</a></p>
+<p>To unsubscribe from further messages, please visit<br />
+<a href="https://sourceforge.net/auth/subscriptions/">https://sourceforge.net/auth/subscriptions/</a></p>
+</blockquote></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#a7ef/6775">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="a7ef/6775/3ffc" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/jon13/user_icon?1530665282&amp;w=32" srcset="https://a.fsdn.com/allura/u/jon13/user_icon?w=48&amp;1530665282 1.5x
+        ,
+            https://a.fsdn.com/allura/u/jon13/user_icon?w=64&amp;1530665282 2x" alt="Jon Trulson" title="Jon Trulson" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 622px;   margin-right:0px ">
+<div class="header">
+<a href="/u/jon13/profile/" class="user-mention">
+Jon Trulson
+</a>
+- <i style="color: #777">
+<span title="Thu Sep 08, 2016 05:05 PM UTC">
+2016-09-08
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#a7ef/6775/3ffc" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>On Wed, 7 Sep 2016, "Danilo Schöneberg" wrote:</p>
+<blockquote>
+<p>I'm using FreeBSD 10.3 and couldtake over maintainance of the page.<br />
+</p>
+</blockquote>
+<p>I think you already have wiki edit rights, so go for it :)</p>
+<p><span>[...]</span></p>
+<p>-- <br />
+Jon Trulson</p>
+<p>"If we can hit that bull's-eye, the rest of the dominoes will fall<br />
+like a house of cards... Checkmate."<br />
+-- Zapp Brannigan</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#a7ef/6775/3ffc">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+<ul>
+
+<li>
+<div>
+<div id="04cc" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Michael Faklis" title="Michael Faklis" class="emboss x48">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 652px;  ">
+<div class="header">
+<a href="/u/mfaklis/profile/" class="user-mention">
+Michael Faklis
+</a>
+- <i style="color: #777">
+<span title="Tue Sep 06, 2016 10:25 PM UTC">
+2016-09-06
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#04cc" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>Using FreeBSD 10.3, I was able to complete the build of CDE. I hit a wall in step 10 <br />
+./installCDE -s<strong> /path/to/</strong>cdesktopenv-code/cde</p>
+<ul>
+<li>I don't know what this /path/to/ should be.</li>
+<li>I also don't know what window manager (xdm, sddm, ...) is being used in FreeBSD 10.3. </li>
+<li>I don't recognize xdm or sddm configuration, so it must be something else.</li>
+<li>I'd like to know how to get CDE listed as one of the window desktops, along with kde, Then when the user selects CDE, what is the linkage to the startcde file?</li>
+</ul>
+<p>I tried tracking down the linkages for kde, but I could not find what I needed.</p>
+<p>Would someone point me to the documentation I need to reference?</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#04cc">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="04cc/7cc8" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/jon13/user_icon?1530665282&amp;w=32" srcset="https://a.fsdn.com/allura/u/jon13/user_icon?w=48&amp;1530665282 1.5x
+        ,
+            https://a.fsdn.com/allura/u/jon13/user_icon?w=64&amp;1530665282 2x" alt="Jon Trulson" title="Jon Trulson" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 632px;   margin-right:0px ">
+<div class="header">
+<a href="/u/jon13/profile/" class="user-mention">
+Jon Trulson
+</a>
+- <i style="color: #777">
+<span title="Mon Jul 02, 2018 06:54 PM UTC">
+2018-07-02
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#04cc/7cc8" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>This should be the full path to where the source code was built. So, assuming I cloned it into my src directory as cdesktopenv-code, the path would be:</p>
+<p>./installCDE -s /home/jon/src/cdesktopenv-code/cde</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#04cc/7cc8">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+<ul>
+
+<li>
+<div>
+<div id="4884" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Michael Faklis" title="Michael Faklis" class="emboss x48">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 652px;  ">
+<div class="header">
+<a href="/u/mfaklis/profile/" class="user-mention">
+Michael Faklis
+</a>
+- <i style="color: #777">
+<span title="Tue Jun 05, 2018 03:49 PM UTC">
+2018-06-05
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#4884" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>I discovered in FreeBSD 11.1 that CDE is in the ports.</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#4884">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+</ul>
+<ul>
+
+<li>
+<div>
+<div id="258b" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Jose Fernando Ayala Barrios" title="Jose Fernando Ayala Barrios" class="emboss x48">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 652px;  ">
+<div class="header">
+<a href="/u/joeskullrose/profile/" class="user-mention">
+Jose Fernando Ayala Barrios
+</a>
+- <i style="color: #777">
+<span title="Mon Sep 10, 2018 10:57 PM UTC">
+2018-09-10
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#258b" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>Hi I install CDE 2.3.0 in freebsd it work good, but when i try enter using /usr/dt/bin/Xsession dont work and using X &amp; /usr/dt/bin/Xsession i have a problem with AIGLX and swiching the resolution</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#258b">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+</ul>
+<ul>
+
+<li>
+<div>
+<div id="f6bf" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Jose Fernando Ayala Barrios" title="Jose Fernando Ayala Barrios" class="emboss x48">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 652px;  ">
+<div class="header">
+<a href="/u/joeskullrose/profile/" class="user-mention">
+Jose Fernando Ayala Barrios
+</a>
+- <i style="color: #777">
+<span title="Tue Sep 11, 2018 12:37 AM UTC">
+2018-09-11
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#f6bf" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>I fixed, the simple way to do that is using a desktop manager, and I install lightdm</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#f6bf">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+</ul>
+<ul>
+
+<li>
+<div>
+<div id="0f83" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Sebastian Tamon Hascilowicz" title="Sebastian Tamon Hascilowicz" class="emboss x48">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 652px;  ">
+<div class="header">
+<a href="/u/maselko/profile/" class="user-mention">
+Sebastian Tamon Hascilowicz
+</a>
+- <i style="color: #777">
+<span title="Fri Jan 08, 2021 07:32 PM UTC">
+2021-01-08
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>Hi, I would like to install CDE but ksh93 package is not ported to aarch64. However, there is another ksh2020 package and port which supports this architecture. I have tried to compile with the ksh2020 but it gives an error message ksh93 not found. Are there any walkarounds to use ksh2020 package? </p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="0f83/7351" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/fathippo/user_icon?1634904114&amp;w=32" srcset="https://a.fsdn.com/allura/u/fathippo/user_icon?w=48&amp;1634904114 1.5x
+        ,
+            https://a.fsdn.com/allura/u/fathippo/user_icon?w=64&amp;1634904114 2x" alt="Danilo Pecher" title="Danilo Pecher" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 632px;   margin-right:0px ">
+<div class="header">
+<a href="/u/fathippo/profile/" class="user-mention">
+Danilo Pecher
+</a>
+- <i style="color: #777">
+<span title="Sat Jan 09, 2021 09:25 AM UTC">
+2021-01-09
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>Have you tried compiling the ksh package from the ports collection?</p>
+<p>On Fri, 8 Jan 2021 at 20:32, Sebastian Tamon Hascilowicz<br />
+<a href="mailto:maselko@users.sourceforge.net">maselko@users.sourceforge.net</a> wrote:</p>
+<blockquote>
+<p>Hi, I would like to install CDE but ksh93 package is not ported to aarch64. However, there is another ksh2020 package and port which supports this architecture. I have tried to compile with the ksh2020 but it gives an error message ksh93 not found. Are there any walkarounds to use ksh2020 package?</p>
+<hr />
+<p>Sent from sourceforge.net because you indicated interest in <a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/">https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/</a></p>
+<p>To unsubscribe from further messages, please visit <a href="https://sourceforge.net/auth/subscriptions/">https://sourceforge.net/auth/subscriptions/</a></p>
+</blockquote></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="0f83/7351/e853" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/fathippo/user_icon?1634904114&amp;w=32" srcset="https://a.fsdn.com/allura/u/fathippo/user_icon?w=48&amp;1634904114 1.5x
+        ,
+            https://a.fsdn.com/allura/u/fathippo/user_icon?w=64&amp;1634904114 2x" alt="Danilo Pecher" title="Danilo Pecher" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 622px;   margin-right:0px ">
+<div class="header">
+<a href="/u/fathippo/profile/" class="user-mention">
+Danilo Pecher
+</a>
+- <i style="color: #777">
+<span title="Sat Jan 09, 2021 10:01 AM UTC">
+2021-01-09
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>So, didn't the ksh93 package compile? You write it hasn't be ported,<br />
+which I take to mean there is no binary package for it, as the ports<br />
+tree is the same for all platforms. The source package in the port<br />
+tree might still compile. And if you tried, perhaps attach a log of<br />
+the compile process. I have painful experience in making it compile on<br />
+NetBSD until they finally fixed it in NetBSD 8.</p>
+<p>On Sat, 9 Jan 2021 at 10:25, Danilo Pecher<br />
+<a href="mailto:fathippo@users.sourceforge.net">fathippo@users.sourceforge.net</a> wrote:</p>
+<blockquote>
+<p>Have you tried compiling the ksh package from the ports collection?</p>
+<p>On Fri, 8 Jan 2021 at 20:32, Sebastian Tamon Hascilowicz<br />
+maselko@users.sourceforge.net wrote:</p>
+<p>Hi, I would like to install CDE but ksh93 package is not ported to aarch64. However, there is another ksh2020 package and port which supports this architecture. I have tried to compile with the ksh2020 but it gives an error message ksh93 not found. Are there any walkarounds to use ksh2020 package?</p>
+<hr />
+<p>Sent from sourceforge.net because you indicated interest in <a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/">https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/</a></p>
+<p>To unsubscribe from further messages, please visit <a href="https://sourceforge.net/auth/subscriptions/">https://sourceforge.net/auth/subscriptions/</a></p>
+<hr />
+<p>Sent from sourceforge.net because you indicated interest in <a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/">https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/</a></p>
+<p>To unsubscribe from further messages, please visit <a href="https://sourceforge.net/auth/subscriptions/">https://sourceforge.net/auth/subscriptions/</a></p>
+</blockquote></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="0f83/7351/e853/a07b" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Sebastian Tamon Hascilowicz" title="Sebastian Tamon Hascilowicz" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 612px;   margin-right:0px ">
+<div class="header">
+<a href="/u/maselko/profile/" class="user-mention">
+Sebastian Tamon Hascilowicz
+</a>
+- <i style="color: #777">
+<span title="Sat Jan 09, 2021 12:34 PM UTC">
+2021-01-09
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>Thank you for your response. So there are several ports for ksh on FreeBSD. They are: shells/ksh93, shells/ksh93-devel and shells/ksh2020. The only one which I was able to compile was ksh2020. However, when I compile CDE, it shows that ksh93 is not found. Thus, I am asking is there any walk around? I will try to compile with ksh2020's ksh93 and record the compilation messages.</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+<br><small>Last edit: Sebastian Tamon Hascilowicz 2021-01-09</small>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="0f83/7351/e853/a07b/ce38" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Sebastian Tamon Hascilowicz" title="Sebastian Tamon Hascilowicz" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 602px;   margin-right:0px ">
+<div class="header">
+<a href="/u/maselko/profile/" class="user-mention">
+Sebastian Tamon Hascilowicz
+</a>
+- <i style="color: #777">
+<span title="Sat Jan 09, 2021 01:49 PM UTC">
+2021-01-09
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>Here is the make log.</p>
+<p>the issue seems to be the same as listed here<br />
+<a href="https://sourceforge.net/p/cdesktopenv/mailman/message/35419561/">https://sourceforge.net/p/cdesktopenv/mailman/message/35419561/</a></p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+<br><small>Last edit: Sebastian Tamon Hascilowicz 2021-01-09</small>
+</div>
+<div class="attachment_holder">
+<div class="attachment_item">
+<div class="attachment-name">
+<i class="fa fa-file-o" aria-hidden="true"></i>
+<a href="/p/cdesktopenv/wiki/_discuss/thread/db608496/0f83/7351/e853/a07b/ce38/attachment/cdee-make.log">cdee-make.log</a>
+</div>
+<div class="attachment_toolbar">
+<form method="POST" action="/p/cdesktopenv/wiki/_discuss/thread/db608496/0f83/7351/e853/a07b/ce38/attachment/cdee-make.log">
+<a href="/p/cdesktopenv/wiki/_discuss/thread/db608496/0f83/7351/e853/a07b/ce38/attachment/cdee-make.log" download title="Download File" class="btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-download" aria-hidden="true"></i></span>
+</a>
+<input type="hidden" name="delete" value="True">
+<input name="_session_id" type="hidden" value="44d8156a685a0687a9a68995396a5a908088e03b02555c505efdffd8905969b118bb8c840269edb7">
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="0f83/7351/e853/a07b/ce38/1806" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/fathippo/user_icon?1634904114&amp;w=32" srcset="https://a.fsdn.com/allura/u/fathippo/user_icon?w=48&amp;1634904114 1.5x
+        ,
+            https://a.fsdn.com/allura/u/fathippo/user_icon?w=64&amp;1634904114 2x" alt="Danilo Pecher" title="Danilo Pecher" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 592px;   margin-right:0px ">
+<div class="header">
+<a href="/u/fathippo/profile/" class="user-mention">
+Danilo Pecher
+</a>
+- <i style="color: #777">
+<span title="Sat Jan 09, 2021 02:54 PM UTC">
+2021-01-09
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38/1806" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>Have you tried to soft-link the ksh2020 binary to ksh93? Not sure if<br />
+it works, but unless they've done major changes to it, it might be<br />
+worth a try.</p>
+<p>On Sat, 9 Jan 2021 at 14:49, Sebastian Tamon Hascilowicz<br />
+<a href="mailto:maselko@users.sourceforge.net">maselko@users.sourceforge.net</a> wrote:</p>
+<blockquote>
+<p>Here is the make log.</p>
+<p>Attachments:</p>
+<p>cdee-make.log (947.2 kB; application/octet-stream)</p>
+<hr />
+<p>Sent from sourceforge.net because you indicated interest in <a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/">https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/</a></p>
+<p>To unsubscribe from further messages, please visit <a href="https://sourceforge.net/auth/subscriptions/">https://sourceforge.net/auth/subscriptions/</a></p>
+</blockquote></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38/1806">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+
+<li>
+<div>
+<div id="0f83/7351/e853/a07b/ce38/3449" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/fathippo/user_icon?1634904114&amp;w=32" srcset="https://a.fsdn.com/allura/u/fathippo/user_icon?w=48&amp;1634904114 1.5x
+        ,
+            https://a.fsdn.com/allura/u/fathippo/user_icon?w=64&amp;1634904114 2x" alt="Danilo Pecher" title="Danilo Pecher" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 592px;   margin-right:0px ">
+<div class="header">
+ <a href="/u/fathippo/profile/" class="user-mention">
+Danilo Pecher
+</a>
+- <i style="color: #777">
+<span title="Sat Jan 09, 2021 02:55 PM UTC">
+2021-01-09
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38/3449" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>The make log from the failed shells/ksh93 build would be more helpful.</p>
+<p>On Sat, 9 Jan 2021 at 14:49, Sebastian Tamon Hascilowicz<br />
+<a href="mailto:maselko@users.sourceforge.net">maselko@users.sourceforge.net</a> wrote:</p>
+<blockquote>
+<p>Here is the make log.</p>
+<p>Attachments:</p>
+<p>cdee-make.log (947.2 kB; application/octet-stream)</p>
+<hr />
+<p>Sent from sourceforge.net because you indicated interest in <a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/">https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/</a></p>
+<p>To unsubscribe from further messages, please visit <a href="https://sourceforge.net/auth/subscriptions/">https://sourceforge.net/auth/subscriptions/</a></p>
+</blockquote></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38/3449">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="0f83/7351/e853/a07b/ce38/3449/5e7f" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Sebastian Tamon Hascilowicz" title="Sebastian Tamon Hascilowicz" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 582px;   margin-right:0px ">
+<div class="header">
+<a href="/u/maselko/profile/" class="user-mention">
+Sebastian Tamon Hascilowicz
+</a>
+- <i style="color: #777">
+<span title="Sat Jan 09, 2021 04:31 PM UTC">
+2021-01-09
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38/3449/5e7f" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>It is marked as broken. Thus I cannot compile shells/ksh93.</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38/3449/5e7f">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="0f83/7351/e853/a07b/ce38/3449/5e7f/9682" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Sebastian Tamon Hascilowicz" title="Sebastian Tamon Hascilowicz" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 572px;   margin-right:0px ">
+<div class="header">
+<a href="/u/maselko/profile/" class="user-mention">
+Sebastian Tamon Hascilowicz
+</a>
+- <i style="color: #777">
+<span title="Mon Jan 11, 2021 12:27 PM UTC">
+2021-01-11
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38/3449/5e7f/9682" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>Found the problem. ksh2020 port does not install libAST which is required for CDE to install. Thus, it cannot be installed. Well, hopefully ksh93 port will be supporting my architecture in the future. Thank you for your help!</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38/3449/5e7f/9682">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="0f83/7351/e853/a07b/ce38/3449/5e7f/9682/c777" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Roger Brown" title="Roger Brown" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 562px;   margin-right:0px ">
+<div class="header">
+<a href="/u/rhubarb-geek-nz/profile/" class="user-mention">
+Roger Brown
+</a>
+- <i style="color: #777">
+<span title="Mon Dec 06, 2021 09:20 AM UTC">
+2021-12-06
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38/3449/5e7f/9682/c777" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p><a class="" href="https://sourceforge.net/p/rhubarb-pi/code/HEAD/tree/branches/freebsd/pkg/ksh93/package.sh#l35">ksh93</a></p>
+<p>I have a script which creates a binary package for ksh93 for FreeBSD aarch64.</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#0f83/7351/e853/a07b/ce38/3449/5e7f/9682/c777">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+<ul>
+
+<li>
+<div>
+<div id="7fc3" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Sebastian Tamon Hascilowicz" title="Sebastian Tamon Hascilowicz" class="emboss x48">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 652px;  ">
+<div class="header">
+<a href="/u/maselko/profile/" class="user-mention">
+Sebastian Tamon Hascilowicz
+</a>
+- <i style="color: #777">
+<span title="Tue Jan 26, 2021 05:32 PM UTC">
+2021-01-26
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#7fc3" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+ <div class="display_post">
+<div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+<br><small>Last edit: Sebastian Tamon Hascilowicz 2021-01-27</small>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#7fc3">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+</ul>
+<ul>
+
+<li>
+<div>
+<div id="5da8" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/fathippo/user_icon?1634904114" srcset="https://a.fsdn.com/allura/u/fathippo/user_icon?w=72&amp;1634904114 1.5x
+        ,
+            https://a.fsdn.com/allura/u/fathippo/user_icon?w=96&amp;1634904114 2x" alt="Danilo Pecher" title="Danilo Pecher" class="emboss x48">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 652px;  ">
+<div class="header">
+<a href="/u/fathippo/profile/" class="user-mention">
+Danilo Pecher
+</a>
+- <i style="color: #777">
+<span title="Wed Oct 27, 2021 09:35 AM UTC">
+2021-10-27
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#5da8" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>Updated the page with added information about port builds and dtlogin. </p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#5da8">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+</ul>
+<ul>
+
+<li>
+<div>
+<div id="1c46" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Andrey Komarov" title="Andrey Komarov" class="emboss x48">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 652px;  ">
+<div class="header">
+<a href="/u/aak1978/profile/" class="user-mention">
+Andrey Komarov
+</a>
+- <i style="color: #777">
+<span title="Tue Nov 02, 2021 12:58 PM UTC">
+2021-11-02
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#1c46" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>CDE 2.4.0: i386 is now broken because it cannot bind to a temporary of type va_list.</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#1c46">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="1c46/cbf6" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/allura/u/fathippo/user_icon?1634904114&amp;w=32" srcset="https://a.fsdn.com/allura/u/fathippo/user_icon?w=48&amp;1634904114 1.5x
+        ,
+            https://a.fsdn.com/allura/u/fathippo/user_icon?w=64&amp;1634904114 2x" alt="Danilo Pecher" title="Danilo Pecher" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 632px;   margin-right:0px ">
+<div class="header">
+<a href="/u/fathippo/profile/" class="user-mention">
+Danilo Pecher
+</a>
+- <i style="color: #777">
+<span title="Tue Nov 02, 2021 03:00 PM UTC">
+2021-11-02
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#1c46/cbf6" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>I'll prepare a vm and have a look at it. What version are you using?</p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#1c46/cbf6">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+
+<li>
+<div>
+<div id="1c46/cbf6/cbd6" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Andrey Komarov" title="Andrey Komarov" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 622px;   margin-right:0px ">
+<div class="header">
+<a href="/u/aak1978/profile/" class="user-mention">
+Andrey Komarov
+</a>
+- <i style="color: #777">
+<span title="Tue Nov 02, 2021 08:38 PM UTC">
+2021-11-02
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#1c46/cbf6/cbd6" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>I've tried compiling CDE 2.4.0 several times, but the system hangs on a blue screen "Starting CDE.  CDE 2.3.2 installed from previously saved packages CDE 2.3.2 txz from the / var / cache / pkg/  folder.<br />
+Vào 19:07:26 GMT+3, Thứ Ba, 2 tháng 11, 2021, Danilo Pecher <a href="mailto:fathippo@users.sourceforge.net">fathippo@users.sourceforge.net</a> đã viết: </p>
+<p>I'll prepare a vm and have a look at it. What version are you using?</p>
+<p>Sent from sourceforge.net because you indicated interest in <a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/">https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/</a></p>
+<p>To unsubscribe from further messages, please visit <a href="https://sourceforge.net/auth/subscriptions/">https://sourceforge.net/auth/subscriptions/</a></p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+<div class="attachment_holder">
+<div class="attachment_item">
+<div class="attachment-name">
+<i class="fa fa-file-o" aria-hidden="true"></i>
+<a href="/p/cdesktopenv/wiki/_discuss/thread/db608496/1c46/cbf6/cbd6/attachment/alternate">alternate</a>
+</div>
+<div class="attachment_toolbar">
+<form method="POST" action="/p/cdesktopenv/wiki/_discuss/thread/db608496/1c46/cbf6/cbd6/attachment/alternate">
+<a href="/p/cdesktopenv/wiki/_discuss/thread/db608496/1c46/cbf6/cbd6/attachment/alternate" download title="Download File" class="btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-download" aria-hidden="true"></i></span>
+</a>
+<input type="hidden" name="delete" value="True">
+ <input name="_session_id" type="hidden" value="44d8156a685a0687a9a68995396a5a908088e03b02555c505efdffd8905969b118bb8c840269edb7">
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#1c46/cbf6/cbd6">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+
+<li>
+<div>
+<div id="1c46/cbf6/f965" class="discussion-post">
+<div class="comment-row">
+<div class="grid-2 tcenter gravatar">
+<p class="gravatar">
+<img src="https://a.fsdn.com/con/images/sandiego/icons/default-avatar.png" alt="Andrey Komarov" title="Andrey Komarov" class="emboss x32">
+</p>
+</div>
+<div class="grid-16 post-content bubble" style="width: 622px;   margin-right:0px ">
+<div class="header">
+<a href="/u/aak1978/profile/" class="user-mention">
+Andrey Komarov
+</a>
+- <i style="color: #777">
+<span title="Tue Nov 02, 2021 08:58 PM UTC">
+2021-11-02
+</span>
+</i>
+<div class="tools">
+<a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#1c46/cbf6/f965" title="Link" class="little_link shortlink icon btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-link" aria-hidden="true"></i></span></a>
+</div>
+</div>
+<div class="display_post">
+<div><div class="markdown_content"><p>FreeBSD 13.0 RELEASE, CDE 2.3.2.  CDE is not currently available for i386.</p>
+<div class="codehilite"><pre><span></span><span class="n">Vào</span><span class="w"> </span><span class="mi">19</span><span class="err">:</span><span class="mi">07</span><span class="err">:</span><span class="mi">26</span><span class="w"> </span><span class="n">GMT</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Thứ</span><span class="w"> </span><span class="n">Ba</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">tháng</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="mi">2021</span><span class="p">,</span><span class="w"> </span><span class="n">Danilo</span><span class="w"> </span><span class="n">Pecher</span><span class="w"> </span><span class="o">&lt;</span><span class="n">fathippo</span><span class="nv">@users</span><span class="p">.</span><span class="n">sourceforge</span><span class="p">.</span><span class="n">net</span><span class="o">&gt;</span><span class="w"> </span><span class="n">đã</span><span class="w"> </span><span class="nl">viết</span><span class="p">:</span><span class="w"></span>
+</pre></div>
+<p>I'll prepare a vm and have a look at it. What version are you using?</p>
+<p>Sent from sourceforge.net because you indicated interest in <a href="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/">https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/</a></p>
+<p>To unsubscribe from further messages, please visit <a href="https://sourceforge.net/auth/subscriptions/">https://sourceforge.net/auth/subscriptions/</a></p></div></div>&nbsp;
+<div class='reactions' style='user-select: none; cursor: default'>
+</div>
+</div>
+<div class="attachment_holder">
+<div class="attachment_item">
+<div class="attachment-name">
+<i class="fa fa-file-o" aria-hidden="true"></i>
+<a href="/p/cdesktopenv/wiki/_discuss/thread/db608496/1c46/cbf6/f965/attachment/alternate">alternate</a>
+</div>
+<div class="attachment_toolbar">
+<form method="POST" action="/p/cdesktopenv/wiki/_discuss/thread/db608496/1c46/cbf6/f965/attachment/alternate">
+<a href="/p/cdesktopenv/wiki/_discuss/thread/db608496/1c46/cbf6/f965/attachment/alternate" download title="Download File" class="btn ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+<span><i class="fa fa-download" aria-hidden="true"></i></span>
+</a>
+<input type="hidden" name="delete" value="True">
+<input name="_session_id" type="hidden" value="44d8156a685a0687a9a68995396a5a908088e03b02555c505efdffd8905969b118bb8c840269edb7">
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="shortlink_popup modal" style="display: none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+<div>If you would like to refer to this comment somewhere else in this project, copy and paste the following link:</div>
+<input type="text" style="width:100%;" value="https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/#1c46/cbf6/f965">
+</div>
+</div>
+<ul>
+<li>
+</li>
+</ul>
+</div>
+</div>
+<script>
+$('.attachment_toolbar #remove-attachment').on('click', function(e){
+    $(this).closest('form').submit();
+})
+</script>
+
+<ul>
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+</div>
+<div style="clear:both"></div>
+<div>
+<div>
+<div class="page_list">
+1 <a href="/p/cdesktopenv/wiki/FreeBSDBuild/?page=1">2</a> <a href="/p/cdesktopenv/wiki/FreeBSDBuild/?page=2">3</a> <a href="/p/cdesktopenv/wiki/FreeBSDBuild/?page=1">&gt;</a> <a href="/p/cdesktopenv/wiki/FreeBSDBuild/?page=2">&gt;&gt;</a> (Page 1 of 3)
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+</div>
+<hr>
+<p>
+<a href="/auth/">Log in</a> to post a comment.
+</p>
+</div>
+</div>
+<div id="lightbox_confirm" class="modal" style="display:none">
+<a class="icon close" href="#" title="Close"><i class="fa fa-close"></i></a>
+</div>
+</div>
+</div>
+</section>
+<footer class="sandiego">
+<div class="as-row">
+<div class="footer-wrapper">
+<nav aria-label="Site Links" role="navigation">
+<section>
+<div class="as-h2">SourceForge</div>
+<ul>
+<li><a href="/create/" title="Create a Project">Create a Project</a></li>
+<li><a href="/directory/" title="Open Source Software Directory">Open Source Software</a></li>
+<li><a href="/software/" title="Business Software Directory">Business Software</a></li>
+ <li><a href="/top" title="Top Open Source Projects">Top Downloaded Projects</a></li>
+</ul>
+</section>
+</nav>
+<nav aria-label="Company Links" role="navigation">
+<section>
+<div class="as-h2">Company</div>
+<ul>
+<li><a href="/about">About</a></li>
+<li><a href="/about/leadership" title="Open Source Software Directory">Team</a></li>
+<li class="h-card">
+<address>
+<span class="p-name p-org">SourceForge Headquarters</span><br>
+<span class="p-street-address">225 Broadway Suite 1600</span><br>
+<span class="p-locality">San Diego, CA <span class="p-postal-code">92101</span></span><br>
+<span class="p-tel">+1 (858) 454-5900</span><br>
+</address>
+</li>
+<li id="social">
+<span></span>
+<a href="https://twitter.com/sourceforge" class="twitter" rel="nofollow" target="_blank">
+<svg class="vertical-icon-fix" data-name="twitter" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" /></svg></a>
+<a href="https://fosstodon.org/@sourceforge" rel="me nofollow" target="_blank">
+<svg class="vertical-icon-fix" data-name="mastodon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z" /></svg></a>
+<a href="https://www.facebook.com/sourceforgenet/" class="facebook" rel="nofollow" target="_blank">
+<svg data-name="facebook" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z" /></svg></a>
+<a href="https://www.linkedin.com/company/sourceforge.net" class="linkedin" rel="nofollow" target="_blank">
+<svg data-name="linkedin" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z" /></svg></a>
+<a href="/user/newsletters" rel=nofollow class="newsletter" title="Subscribe to our newsletter">
+<svg class="vertical-icon-fix" data-name="mmSF_11mail" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 42 42" enable-background="new 0 0 42 42" xml:space="preserve"><path fill="#FFFFFF" d="M0,6v30h42V6H0z M24.2,21.2c-0.8,0.8-2.3,2-3.2,2c-0.9,0-2.4-1.2-3.2-2L5.8,9.7h30.3L24.2,21.2z M13.7,21l-9.9,9.4V11.6L13.7,21z M15.7,23L15.7,23c0.5,0.5,2.9,2.9,5.3,2.9c2.4,0,4.8-2.4,5.2-2.8l0.1-0.1l9.8,9.4H5.8L15.7,23z M28.3,21l9.9-9.5v18.9L28.3,21z" /></svg></a>
+<span></span>
+</li>
+</ul>
+</section>
+</nav>
+<nav aria-label="Resources Links" role="navigation">
+<section>
+<div class="as-h2">Resources</div>
+<ul>
+<li><a href="/support" title="Support Section">Support</a></li>
+<li><a href="/p/forge/documentation/Docs%20Home/" title="Site Documentation">Site Documentation</a></li>
+<li><a href="https://twitter.com/sfnet_ops" title="Site Status" rel="nofollow">Site Status</a></li>
+</ul>
+</section>
+</nav>
+<section class="footer-logo">
+<a href="/" title="Home" class="sf-logo">
+<img src="https://a.fsdn.com/con/images/sandiego/sf-logo-full.svg" alt="SourceForge logo" class="sf-logo-full" />
+</a>
+</section>
+</div>
+</div>
+<section class="l-nav-bottom">
+<nav class="row">
+<div class="columns small-12 large-6 copyright-notice">
+&copy; 2023 Slashdot Media. All Rights Reserved.
+</div>
+<div class="columns large-6 links links-right">
+<div>
+<button class="button blue short hollow" data-open="ccpa-modal">
+<img src="https://a.fsdn.com/allura/nf/1683566309/_ew_/theme/sftheme/images/sandiego/ccpa-optout.png" alt="Icon" id=ccpa-icon>
+Do Not Sell My Personal Information</button>
+</div>
+<div class="reveal" data-reveal id="ccpa-modal">
+<div class="modal-content">
+<div class="modal-header" id="ccpa-modal-content-destination">
+</div>
+<button class="close-button" data-close aria-label="Close modal" type="button">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+</div><a href="https://slashdotmedia.com/terms-of-use" title="Terms" rel="nofollow">Terms</a>
+<a href="https://slashdotmedia.com/privacy-statement/" title="Privacy" rel="nofollow">Privacy</a>
+<a href="https://slashdotmedia.com/contact/" target="_blank" title="Advertise" rel="nofollow">Advertise</a>
+</div>
+</nav>
+</section>
+</footer>
+</div>
+<div id="messages">
+</div>
+
+<script type="text/javascript" src="https://a.fsdn.com/allura/nf/1683566309/_ew_/_slim/js?href=allura%2Fjs%2Fjquery.notify.js%3Ballura%2Fjs%2Fjquery.tooltipster.js%3Ballura%2Fjs%2Fallura-base.js%3Ballura%2Fjs%2Fchecklist.js%3Ballura%2Fjs%2Fadmin_modal.js%3Bjs%2Fjquery.lightbox_me.js%3Ballura%2Fjs%2Fmemorable.js%3Bjs%2Fjquery.tagsinput.js%3Bjs%2Feasymde.min.js%3Bjs%2Fsf_markitup.js%3Bjs%2Fshow-hint.js%3Bjs%2Fusermentions-helper.js%3Bjs%2Fpost.js%3Bjs%2Freactions.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fshared.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsticky.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsandiego%2Fchrome.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsandiego%2Futilities.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.core.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.mediaQuery.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.keyboard.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.box.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.nest.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.dropdownMenu.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.offcanvas.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.toggler.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fsandiego%2Fproject.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Fjquery.typeahead.min.js"></script>
+
+
+<script type="text/javascript">$(function () {
+            var $lightbox = $('#lightbox_confirm');
+            $('body').on('click', 'a.post-link', function(e) {
+                e.preventDefault();
+                $lightbox.lightbox_me({ modalCSS: { minHeight: 0, width: 'inherit', top: '150px'}});
+            });
+            $lightbox.on('click', '.close', function(e) {
+                e.preventDefault();
+                $lightbox.trigger('close');
+            });
+        });
+$(function () {
+            $('select.results_per_page').change(function () {
+                this.form.submit();});});
+$(function () {
+          $('input.label_edit').tagsInput({
+              'height':'100%',
+              'width':'100%',
+              'autocomplete_url':'/p/cdesktopenv/wiki/tags'
+          });
+          $('form').on('blur', '.ui-autocomplete-input', function() {
+              setTimeout(function(){
+                  var clicked = $(document.activeElement); // This is the element that has focus
+                  if (clicked.is('#ui-active-menuitem')) {
+                      return false;
+                  } else {
+                      var value = $('div.tagsinput div input').val();
+                      var exists = $('input.label_edit').tagExist(value);
+                      var default_value = $('div.tagsinput div input').attr('data-default');
+                      if ((value !== default_value) && (!exists) && value !== '') {
+                          $('input.label_edit').addTag(value);
+                      }
+                      $('input[type=submit]', this).prop('disabled', true);
+                  }
+                }, 1);
+            });
+        });
+$(function () {getProjectUsers('/p/cdesktopenv//users')});
+$(document).ready(function () {
+            $("a.attachment_form_add_button").click(function(evt){
+                $(this).hide();
+                $(".attachment_form_fields", this.parentNode).show();
+                evt.preventDefault();
+            });
+            $("a.cancel_edit_post").click(function(evt){
+                evt.preventDefault();
+                var form = this.parentNode;
+                var orig_val = $("input.original_value", form).val();
+                $("textarea", form).val(orig_val);
+                get_cm(form).setValue(orig_val);
+                $("input.attachment_form_fields", form).val('');
+                $(this).closest('.reply_post_form').hide();
+            });
+         });
+
+        $(document).ready(function () {
+            var thread_tag = $('a.thread_tag');
+            var thread_spam = $('a.sidebar_thread_spam');
+            var tag_thread_holder = $('#tag_thread_holder');
+            var allow_moderate = $('#allow_moderate');
+            var mod_thread_link = $('#mod_thread_link');
+            var mod_thread_form = $('#mod_thread_form');
+            if (mod_thread_link.length) {
+                if (mod_thread_form.length) {
+                    mod_thread_link.click(function (e) {
+                        mod_thread_form.toggle();
+                        return false;
+                    });
+                }
+            }
+            if (thread_tag.length) {
+                if (tag_thread_holder.length) {
+                    var submit_button = $('input[type="submit"]', tag_thread_holder);
+                    var cancel_button = $('<a href="#" class="btn link">Cancel</a>').click(function(evt){
+                        evt.preventDefault();
+                        tag_thread_holder.hide();
+                        thread_tag.removeClass('active');
+                    });
+                    submit_button.after(cancel_button);
+                    thread_tag.click(function (e) {
+                        tag_thread_holder.show();
+                        thread_tag.addClass('active');
+                        // focus the submit to scroll to the form, then focus the subject for them to start typing
+                        submit_button.focus();
+                        $('input[type="text"]', tag_thread_holder).focus();
+                        return false;
+                    });
+                }
+            }
+            if (thread_spam.length) {
+                if (allow_moderate.length) {
+                    thread_spam[0].style.display='block';
+                }
+            }
+        });
+        
+
+            var global_reactions = {":+1:": "\ud83d\udc4d", ":-1:": "\ud83d\udc4e", ":smile:": "\ud83d\ude04", ":tada:": "\ud83c\udf89", ":confused:": "\ud83d\ude15", ":heart:": "\u2764\ufe0f"};
+        </script>
+<script type="text/javascript" src="https://a.fsdn.com/allura/nf/1683566309/_ew_/_slim/js?href=theme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.util.triggers.min.js%3Btheme%2Fsftheme%2Fjs%2Fsftheme%2Fvendor%2Ffoundation6%2Fplugins%2Ffoundation.reveal.min.js"></script>
+
+<script type="text/javascript">
+        $('.post-link').click(function () {
+            var dialog_text;
+            var version = $(this).data("dialog-id");
+            if (version) {
+                dialog_text = $(".confirmation_dialog_" + version);
+            } else {
+                dialog_text = $(".confirmation_dialog");
+            }
+
+            var modal = $('#lightbox_confirm');
+            modal.html(dialog_text.html());
+
+            modal.find('.continue_confirm').click(function (evt) {
+                var cval = $.cookie('_session_id');
+                evt.preventDefault();
+                var _t = $(this);
+                var url = _t.data('href') || _t.attr('href');
+                $.post(url, {_session_id: cval}, function (val) {
+                    window.location = val.location;
+                }, 'json');
+            });
+        });
+    </script>
+<noscript><p><img src="//analytics.slashdotmedia.com/sf.php?idsite=39" style="border:0;position:absolute;top:0;" alt="" /></p></noscript>
+<script>
+        $(document).foundation();
+    </script>
+<script>
+    $(document).ready(function () {
+        $(".tooltip, .m-tooltip").each(function(){
+            let $el = $(this);
+            $el.tooltipster({
+                animation: 'fade',
+                delay: 200,
+                theme: 'tooltipster-light',
+                trigger: 'hover',
+                position: $el.data('position') || 'right',
+                iconCloning: false,
+                maxWidth: 300,
+                contentAsHTML: true,
+                interactive: true
+            }).focus(function () {
+                $(this).tooltipster('show');
+            }).blur(function () {
+                $(this).tooltipster('hide');
+            });
+        });
+    });
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7c4bfde9ff99b0dc","token":"05ab2f27910c4db284f4fcdcd6948338","version":"2023.4.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
