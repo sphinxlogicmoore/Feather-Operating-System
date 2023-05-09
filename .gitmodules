@@ -4,3 +4,6 @@
 [submodule "cde"]
 	path = cde
 	url = https://github.com/cdesktopenv/cde.git
+[submodule "qt5"]
+	path = qt5
+	url = https://github.com/qt/qt5.git
