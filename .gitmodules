@@ -1,0 +1,6 @@
+[submodule "freebsd-src"]
+	path = freebsd-src
+	url = https://github.com/freebsd/freebsd-src.git
+[submodule "cde"]
+	path = cde
+	url = https://github.com/cdesktopenv/cde.git
